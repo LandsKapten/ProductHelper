@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
+
 import java.text.DecimalFormat;
 
 public class coal extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -26,6 +30,18 @@ public class coal extends AppCompatActivity implements AdapterView.OnItemSelecte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coal);
+
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setDisplay(Display.DIALOG);
+        appUpdater.setUpdateFrom(UpdateFrom.JSON);
+        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
+        appUpdater.setTitleOnUpdateAvailable("Update available");
+        appUpdater.setContentOnUpdateAvailable("Check out the latest version available of my app!");
+        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
+        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
+        appUpdater.setButtonUpdate("Update now");
+        appUpdater.setCancelable(false);
+        appUpdater.start();
 
         CheckBox checkbox1 = (CheckBox) findViewById(R.id.weeklyBoost);
         checkbox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
