@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         appUpdater.setContentOnUpdateAvailable("Check out the latest version available of my app!");
         appUpdater.setTitleOnUpdateNotAvailable("Update not available");
         appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
-        appUpdater.setButtonUpdate("Update now?");
+        appUpdater.setButtonUpdate("Update now");
         appUpdater.setCancelable(false);
         appUpdater.start();
 
