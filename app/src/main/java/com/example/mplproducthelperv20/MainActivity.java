@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private EditText Name;
     private EditText Password;
     private Button Login;
@@ -34,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setDisplay(Display.DIALOG);
         appUpdater.setUpdateFrom(UpdateFrom.JSON);
         appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
-        appUpdater.setDisplay(Display.DIALOG);
         appUpdater.setTitleOnUpdateAvailable("Update available");
         appUpdater.setContentOnUpdateAvailable("Check out the latest version available of my app!");
         appUpdater.setTitleOnUpdateNotAvailable("Update not available");
@@ -44,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         appUpdater.setButtonUpdate("Update now");
         appUpdater.setCancelable(false);
         appUpdater.start();
-
 
         Name = (EditText)findViewById(R.id.etName);
         Password = (EditText)findViewById(R.id.etPassword);
