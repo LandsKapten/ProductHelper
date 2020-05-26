@@ -34,9 +34,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AppUpdater appUpdater = new AppUpdater(this);
-        appUpdater.setDisplay(Display.DIALOG)
-        appUpdater.setUpdateFrom(UpdateFrom.JSON)
-        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/javiersantos/AppUpdater/master/app/update-changelog.json")
+        appUpdater.setUpdateFrom(UpdateFrom.JSON);
+        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
+        appUpdater.setDisplay(Display.DIALOG);
+        appUpdater.setTitleOnUpdateAvailable("Update available");
+        appUpdater.setContentOnUpdateAvailable("Check out the latest version available of my app!");
+        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
+        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
+        appUpdater.setButtonUpdate("Update now?");
+        appUpdater.setCancelable(false);
         appUpdater.start();
 
 
