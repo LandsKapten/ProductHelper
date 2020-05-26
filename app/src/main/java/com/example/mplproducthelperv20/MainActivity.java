@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -34,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.setDisplay(Display.DIALOG)
-
-
+        appUpdater.setUpdateFrom(UpdateFrom.JSON)
+        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/javiersantos/AppUpdater/master/app/update-changelog.json")
         appUpdater.start();
 
 
