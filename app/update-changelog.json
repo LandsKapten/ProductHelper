@@ -1,5 +1,12 @@
 {
+<<<<<<< HEAD
   "latestVersion": "1.2.2",
   "latestVersionCode": "1",
   "url": "https://github.com/javiersantos/AppUpdater/releases"
 }
+=======
+  "latestVersion": "1.07",
+  "latestVersionCode": 1,
+  "url": "https://github.com/LandsKapten/ProductHelper/releases",
+}
+>>>>>>> 3b5cdb69e5d3a3d8a031a6a9eb5f383a54b821f7
