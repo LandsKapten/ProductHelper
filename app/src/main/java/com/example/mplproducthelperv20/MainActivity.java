@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,10 +30,24 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
+    private void AppUpdater(){
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setDisplay(Display.DIALOG);
+        appUpdater.setUpdateFrom(UpdateFrom.JSON);
+        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
+        appUpdater.setTitleOnUpdateAvailable("Update available");
+        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
+        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
+        appUpdater.setButtonUpdate("Update now");
+        appUpdater.setButtonDoNotShowAgain(null);
+        appUpdater.setCancelable(false);
+        appUpdater.showAppUpdated(true);
+        appUpdater.start();
 
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -48,15 +63,26 @@ public class MainActivity extends AppCompatActivity {
         appUpdater.setCancelable(false);
         appUpdater.start();
 
-        Name = (EditText)findViewById(R.id.etName);
-        Password = (EditText)findViewById(R.id.etPassword);
-        Login = (Button)findViewById(R.id.btnLogin);
+        TextView tvVersion = (TextView) findViewById(R.id.tvAppVersion);
+
+        tvVersion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUpdater();
+
+            }
+        });
+
+        Name = (EditText) findViewById(R.id.etName);
+        Password = (EditText) findViewById(R.id.etPassword);
+        Login = (Button) findViewById(R.id.btnLogin);
         progressDialog = new ProgressDialog(this);
+
 
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        if(user != null){
+        if (user != null) {
             finish();
             startActivity(new Intent(MainActivity.this, SecondActivity.class));
         }

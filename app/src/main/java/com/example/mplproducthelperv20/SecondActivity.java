@@ -6,6 +6,7 @@ package com.example.mplproducthelperv20;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.Button;
+        import android.widget.TextView;
 
         import com.github.javiersantos.appupdater.AppUpdater;
         import com.github.javiersantos.appupdater.enums.Display;
@@ -13,11 +14,7 @@ package com.example.mplproducthelperv20;
 
 public class SecondActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
-
+    private void AppUpdater(){
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.setDisplay(Display.DIALOG);
         appUpdater.setUpdateFrom(UpdateFrom.JSON);
@@ -28,7 +25,25 @@ public class SecondActivity extends AppCompatActivity {
         appUpdater.setButtonUpdate("Update now");
         appUpdater.setButtonDoNotShowAgain(null);
         appUpdater.setCancelable(false);
+        appUpdater.showAppUpdated(true);
         appUpdater.start();
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+
+        TextView tvVersion = (TextView) findViewById(R.id.tvAppVersion);
+
+        tvVersion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUpdater();
+
+            }
+        });
 
 
         Button coalButton = (Button)findViewById(R.id.coalBtn);
