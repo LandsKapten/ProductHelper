@@ -29,22 +29,26 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    public void getUpdate(int duration, boolean shouldRepeat) {
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.setDisplay(Display.DIALOG);
         appUpdater.setUpdateFrom(UpdateFrom.JSON);
         appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
         appUpdater.setTitleOnUpdateAvailable("Update available");
-        appUpdater.setContentOnUpdateAvailable("Check out the latest version available of my app!");
         appUpdater.setTitleOnUpdateNotAvailable("Update not available");
         appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
         appUpdater.setButtonUpdate("Update now");
         appUpdater.setCancelable(false);
+        if (duration > 0) {
+            appUpdater.showEvery(duration);
+        }
         appUpdater.start();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         Name = (EditText)findViewById(R.id.etName);
         Password = (EditText)findViewById(R.id.etPassword);
