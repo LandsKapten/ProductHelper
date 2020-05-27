@@ -48,27 +48,6 @@ public class MainActivity extends AppCompatActivity {
         appUpdater.setCancelable(false);
         appUpdater.start();
 
-        TextView tvVersion = (TextView) findViewById(R.id.tvAppVersion);
-
-        tvVersion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUpdater appUpdater = new AppUpdater(MainActivity.this);
-                appUpdater.setDisplay(Display.DIALOG);
-                appUpdater.setUpdateFrom(UpdateFrom.JSON);
-                appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
-                appUpdater.setTitleOnUpdateAvailable("Update available");
-                appUpdater.setTitleOnUpdateNotAvailable("Update not available");
-                appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
-                appUpdater.setButtonUpdate("Update now");
-                appUpdater.setButtonDoNotShowAgain(null);
-                appUpdater.setCancelable(false);
-                appUpdater.showAppUpdated(true);
-                appUpdater.start();
-
-
-            }
-        });
 
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
