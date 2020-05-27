@@ -14,37 +14,10 @@ package com.example.mplproducthelperv20;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private void AppUpdater(){
-        AppUpdater appUpdater = new AppUpdater(this);
-        appUpdater.setDisplay(Display.DIALOG);
-        appUpdater.setUpdateFrom(UpdateFrom.JSON);
-        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
-        appUpdater.setTitleOnUpdateAvailable("Update available");
-        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
-        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
-        appUpdater.setButtonUpdate("Update now");
-        appUpdater.setButtonDoNotShowAgain(null);
-        appUpdater.setCancelable(false);
-        appUpdater.showAppUpdated(true);
-        appUpdater.start();
-
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
-        TextView tvVersion = (TextView) findViewById(R.id.tvAppVersion);
-
-        tvVersion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUpdater();
-
-            }
-        });
-
 
         Button coalButton = (Button)findViewById(R.id.coalBtn);
         coalButton.setOnClickListener(new View.OnClickListener() {
