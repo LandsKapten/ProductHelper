@@ -38,8 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.setDisplay(Display.DIALOG);
-        appUpdater.setUpdateFrom(UpdateFrom.JSON);
-        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
+        appUpdater.setUpdateFrom(UpdateFrom.GITHUB);
+        appUpdater.setGitHubUserAndRepo("LandsKapten", "ProductHelper");
+
+       // appUpdater.setUpdateFrom(UpdateFrom.JSON);
+       // appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update-changelog.json");
         appUpdater.setTitleOnUpdateAvailable("Update available");
         appUpdater.setTitleOnUpdateNotAvailable("Update not available");
         appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
