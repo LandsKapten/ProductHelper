@@ -1,7 +1,7 @@
 <AppUpdater>
     <update>
-        <latestVersion>1.0.8</latestVersion>
+        <latestVersion>1.0.9</latestVersion>
         <latestVersionCode>1</latestVersionCode>
-        <url>https://github.com/LandsKapten/ProductHelper/releases/download/1.08/MPL.Product.Helper.v1.08.apk</url>
+        <url>https://github.com/LandsKapten/ProductHelper/releases/download/1.0.9/MPL.Product.Helper.v1.0.9.apk</url>
     </update>
 </AppUpdater>
