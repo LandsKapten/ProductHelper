@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.setDisplay(Display.DIALOG);
         appUpdater.setUpdateFrom(UpdateFrom.XML);
-        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update.xml");
+        appUpdater.setUpdateXML("https://raw.githubusercontent.com/LandsKapten/ProductHelper/master/app/update.xml");
         appUpdater.setTitleOnUpdateAvailable("Update available");
         appUpdater.setTitleOnUpdateNotAvailable("Update not available");
         appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");

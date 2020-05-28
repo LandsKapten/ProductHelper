@@ -2,5 +2,79 @@
     <string name="app_name">MPL Product Helper</string>
     <string name="prodNeededString"><b><u>Productivity Needed</u></b></string>
     <string name="tvLoProdString"><b><u>For lower productivity workers</u></b></string>
-    <string name="versionString">Version 1.0.9</string>
+    <string name="versionString">Build 1.1.0</string>
+    <!-- Don't forget to update the version in build.gradle(:app) and update.xml -->
+
+    <string-array name="spinnerProducts">
+        <item>Bacon</item>
+        <item>Ballistic Missile</item>
+        <item>Beef Steak</item>
+        <item>Beer Pint</item>
+        <item>Bitto Cheese</item>
+        <item>Bomber Jet</item>
+        <item>Bread</item>
+        <item>Cheese</item>
+        <item>Chemical Bomb</item>
+        <item>Chemical Compounds</item>
+        <item>Citrozën C4</item>
+        <item>Clothes Q1</item>
+        <item>Clothes Q2</item>
+        <item>Coal</item>
+        <item>Coffee Beans</item>
+        <item>Coffee(Restaurant)</item>
+        <item>Coffee(Shop)</item>
+        <item>Corn</item>
+        <item>Corn Flour</item>
+        <item>Cotton</item>
+        <item>Cotton Paper</item>
+        <item>Diesel</item>
+        <item>Document Forms</item>
+        <item>Efficiency Book</item>
+        <item>Fabrics</item>
+        <item>Fertilizer</item>
+        <item>Gas Mask</item>
+        <item>Glass Panel</item>
+        <item>Grapes</item>
+        <item>Heavy Tank</item>
+        <item>House Window</item>
+        <item>Iron</item>
+        <item>Kerosene</item>
+        <item>Learning Book</item>
+        <item>Leather</item>
+        <item>Mansion</item>
+        <item>Meat</item>
+        <item>Military Parts</item>
+        <item>Military Vehicle Upgrade</item>
+        <item>Milk jug</item>
+        <item>Mocaccino</item>
+        <item>Newspaper</item>
+        <item>Nice Apartment</item>
+        <item>Nuclear Bomb</item>
+        <item>Oil</item>
+        <item>Paper</item>
+        <item>Plastic</item>
+        <item>Polyester</item>
+        <item>Pressed Wine</item>
+        <item>Private Plane</item>
+        <item>Processed Fuel</item>
+        <item>Processed Milk</item>
+        <item>Raw Milk</item>
+        <item>Receipts</item>
+        <item>Sand</item>
+        <item>Small House</item>
+        <item>Steel</item>
+        <item>Stone</item>
+        <item>Uranium</item>
+        <item>Vegetables</item>
+        <item>Vehicles Parts</item>
+        <item>Weapons Q1</item>
+        <item>Weapons Q2</item>
+        <item>Wheat</item>
+        <item>Wheat Flour</item>
+        <item>Wood</item>
+        <item>Work Ethics Course</item>
+
+    </string-array>
 </resources>
+
+
