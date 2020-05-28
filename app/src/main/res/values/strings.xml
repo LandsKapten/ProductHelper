@@ -2,7 +2,7 @@
     <string name="app_name">MPL Product Helper</string>
     <string name="prodNeededString"><b><u>Productivity Needed</u></b></string>
     <string name="tvLoProdString"><b><u>For lower productivity workers</u></b></string>
-    <string name="versionString">Build 1.1.1</string>
+    <string name="versionString">Build 1.1.2</string>
     <!-- Don't forget to update the version in build.gradle(:app) and update.xml -->
 
     <string-array name="spinnerProducts">
