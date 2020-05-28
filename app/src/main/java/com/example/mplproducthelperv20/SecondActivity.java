@@ -47,7 +47,14 @@ public class SecondActivity extends AppCompatActivity {
         coalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SecondActivity.this, coal.class));
+                startActivity(new Intent(SecondActivity.this, com.example.mplproducthelperv20.coal.class));
+            }
+        });
+        Button workTimerButton = findViewById(R.id.workTimerBtn);
+        workTimerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  startActivity(new Intent(SecondActivity.this, WorkTimerActivitiy.class));
             }
         });
     }
